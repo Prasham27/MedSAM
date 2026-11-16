@@ -3,8 +3,37 @@
 This file is the single source of truth for *any* Claude Code session (or human) picking up this
 project. Read it fully before doing anything. Keep it updated after every meaningful step.
 
+## STATUS: PROJECT COMPLETE — GitHub copy is for REPORT / DOCUMENT GENERATION ONLY
+Repo: https://github.com/Prasham27/MedSAM (branch `main`). All experiments are finished; every item
+in §4 is ticked. If you are an agent asked to write the report, slides or documentation, you do NOT
+need to run anything. Read, in this order: `results/REPORT.md` (all numbers), §3 and §4b of this
+file (decisions and headline results), `results/figures/*.png` (19 figures), `results/tables/*.csv`
+and `results/tables/*.json` (raw numbers, training stats), `SPEC.md` (method details),
+`../medsam_final_implementation_plan.md` content is summarised in §1 and §3.
+
+### What is in the git repo
+Code (`data/`, `models/`, `evaluation/`, `scripts/`, `configs/`), `HANDOFF.md`, `SPEC.md`, and
+`results/` (REPORT.md, tables, figures, logs, per-slice prediction PNGs, YOLO detector run folders).
+
+### What is NOT in the git repo (listed in `.gitignore`, ~21 GB, GitHub file-size limit)
+| Folder | Size | What it is | Needed for report? | How to recreate |
+|---|---|---|---|---|
+| `datasets/` | ~12 GB | MSD raw volumes (40 liver, 32 prostate), preprocessed `.npz` slices, YOLO export | No | SPEC §1 download commands, then `python -m data.preprocess_msd --task liver` / `prostate` |
+| `cache/` | ~8 GB | Cached ViT-B embeddings (sam, medsam) | No | `scripts/cache_embeddings.py` |
+| `checkpoints/` | ~1.3 GB | SAM and MedSAM weights, trained LoRA, U-Net, DeepLab, yolov8n | No | SPEC §1 for SAM/MedSAM; retrain with `scripts/run_all_remaining.sh` (~6 h on RTX 3060 6 GB) |
+Only if someone wants to RE-RUN experiments or make new overlays from raw slices do these matter.
+Overlays already generated are in `results/figures/`; per-slice predictions are in `results/preds/`.
+
+### Things a report writer should know
+- Test sets are small (liver 4 volumes, tumor 4, prostate 3), so significance rests on pooled
+  Wilcoxon tests over 11 volumes (REPORT.md section 3b); per-target p-values floor at ~0.25.
+- LoRA budgets were capped (150 optimizer steps, ~43 min per target) because of the 6 GB GPU.
+- Tumor auto-prompting failed (YOLO recall 0.15); report this as a limitation, not a bug.
+- MedSAM-2 and LiteMedSAM were not implemented (see §3); do not claim results for them.
+- The folder was renamed from `medsam-msd-evaluation` to `MedSAM` locally; paths in logs show the old name.
+
 ## 0. How to resume (for a new Claude Code session)
-1. Open this folder (`medsam-msd-evaluation/`) as the working directory.
+1. Open this folder (`MedSAM/`, formerly `medsam-msd-evaluation/`) as the working directory.
 2. Read `HANDOFF.md` (this file) and `SPEC.md` (exact technical spec for every module).
 3. Check the **Status board** below. Find the first item not marked `[x]` and continue from there.
 4. Check `results/logs/` for the latest log of any background job; check `nvidia-smi` for running jobs.
@@ -108,3 +137,4 @@ YOLOv8n+MedSAM fully automatic (no human box): liver 0.946, prostate 0.882, tumo
 - 2026-11-16 04:49  Liver extracted+preprocessed OK. LoRA was too slow (2.9 s/micro-batch, bs1 accum8 => 600 opt steps ~4 h) so killed it and CAPPED budgets: prostate LoRA 150 opt steps/3 epochs, liver LoRA 150 opt steps/1 epoch per target, liver baselines 6 epochs. Launched MASTER CHAIN `scripts/run_all_remaining.sh` -> log results/logs/run_all_remaining.log (lines '=== HH:MM:SS STEP: ...' mark progress; ends with 'ALL DONE' and EXIT=0). It runs: prostate LoRA+bench -> liver embeddings (val/test only; train NOT cached to save disk) -> liver zero-shot -> jitter -> sparse3d -> baselines -> LoRA tumor+liver -> figures -> REPORT.md. Expected finish ~6-7 h. IF IT DIES: read the last STEP line in the log, fix, and rerun the remaining commands from that step (copy them from the script). GPU must be free first (nvidia-smi). Disk: ~34 GB free; don't cache liver train embeddings.
 - 2026-11-16 09:46  MASTER CHAIN FINISHED 09:41 EXIT=0 (all liver/prostate experiments, figures, REPORT.md). Ran cross-task specialist eval (tag crosstask_*, results/logs/crosstask.log). Haiku agent adding pooled-Wilcoxon + cross-task sections to scripts/make_report.py and regenerating REPORT.md. PROJECT COMPLETE except optional 3.3 (YOLO). Possible polish if budget allows: write slides from REPORT.md; longer LoRA training (raise --max_steps) for tumor.
 - 2026-11-16 10:41  YOLO auto-prompt done for both tasks (models/auto_prompt_yolo.py; logs results/logs/yolo_*.log). Liver YOLO first died silently after dataset caching with workers=8 (RAM); fixed with workers=2. Figures + REPORT.md regenerated with yolo_medsam. PROJECT COMPLETE — all status-board items ticked. Deliverables: results/REPORT.md, results/tables/, results/figures/ (19 png), checkpoints/.
+- 2026-11-16 15:40  Repo created at https://github.com/Prasham27/MedSAM and pushed (code + results only; datasets/cache/checkpoints excluded via .gitignore). HANDOFF updated for report-generation use.
