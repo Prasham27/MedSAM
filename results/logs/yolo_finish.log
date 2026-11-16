@@ -1,0 +1,184 @@
+2026-11-16 10:21:08,851 args {'task': 'liver', 'stage': 'all'} device=cuda
+2026-11-16 10:21:08,851 == stage export
+2026-11-16 10:21:08,851 export: C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\data.yaml exists, skipping
+2026-11-16 10:21:08,851 == stage train
+New https://pypi.org/project/ultralytics/8.4.215 available  Update with 'pip install -U ultralytics'
+Ultralytics 8.4.90  Python-3.13.9 torch-2.6.0+cu124 CUDA:0 (NVIDIA GeForce RTX 3060 Laptop GPU, 6144MiB)
+[34m[1mengine\trainer: [0magnostic_nms=False, amp=True, angle=1.0, augment=False, auto_augment=randaugment, batch=16, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=10, cls=0.5, cls_pw=0.0, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\data.yaml, degrees=0.0, deterministic=True, device=, dfl=1.5, dis=6.0, distill_model=None, dnn=False, dropout=0.0, dynamic=False, embed=None, end2end=None, epochs=12, erasing=0.4, exist_ok=True, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=None, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolov8n.pt, momentum=0.937, mosaic=1.0, multi_scale=0.0, name=liver, nbs=64, nms=False, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=100, perspective=0.0, plots=False, pose=12.0, pretrained=True, profile=False, project=C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\results\yolo, quantize=None, rect=False, resume=False, retina_masks=False, rle=1.0, save=True, save_conf=False, save_crop=False, save_dir=C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\results\yolo\liver, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=42, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=tracktrack.yaml, translate=0.1, val=True, verbose=False, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=8, workspace=None
+Overriding model.yaml nc=80 with nc=2
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]             
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]             
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]           
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]                 
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]                 
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]                  
+ 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]                 
+ 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]                 
+ 22        [15, 18, 21]  1    751702  ultralytics.nn.modules.head.Detect           [2, 16, None, [64, 128, 256]] 
+Model summary: 130 layers, 3,011,238 parameters, 3,011,222 gradients, 8.2 GFLOPs
+
+Transferred 319/355 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed 
+WARNING [34m[1mtrain: [0mSlow image access detected (ping: 0.00.0 ms, read: 7.70.8 MB/s, size: 110.4 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips/
+[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 38 images, 0 backgrounds, 0 corrupt: 1% ──────────── 38/2839 113.5it/s 0.1s<24.7s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 85 images, 0 backgrounds, 0 corrupt: 2% ──────────── 85/2839 218.7it/s 0.2s<12.6s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 138 images, 0 backgrounds, 0 corrupt: 4% ╸─────────── 138/2839 307.6it/s 0.3s<8.8s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 188 images, 0 backgrounds, 0 corrupt: 6% ╸─────────── 188/2839 362.7it/s 0.4s<7.3s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 240 images, 0 backgrounds, 0 corrupt: 8% ━─────────── 240/2839 408.6it/s 0.5s<6.4s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 286 images, 0 backgrounds, 0 corrupt: 10% ━─────────── 286/2839 421.2it/s 0.6s<6.1s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 336 images, 0 backgrounds, 0 corrupt: 11% ━─────────── 336/2839 442.0it/s 0.7s<5.7s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 384 images, 0 backgrounds, 0 corrupt: 13% ━╸────────── 384/2839 452.9it/s 0.8s<5.4s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 433 images, 0 backgrounds, 0 corrupt: 15% ━╸────────── 433/2839 463.7it/s 0.9s<5.2s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 481 images, 0 backgrounds, 0 corrupt: 16% ━━────────── 481/2839 463.5it/s 1.0s<5.1s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 530 images, 0 backgrounds, 0 corrupt: 18% ━━────────── 530/2839 471.3it/s 1.1s<4.9s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 576 images, 0 backgrounds, 0 corrupt: 20% ━━────────── 576/2839 466.5it/s 1.2s<4.9s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 624 images, 0 backgrounds, 0 corrupt: 21% ━━╸───────── 624/2839 470.0it/s 1.3s<4.7s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 669 images, 0 backgrounds, 0 corrupt: 23% ━━╸───────── 669/2839 462.6it/s 1.4s<4.7s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 720 images, 0 backgrounds, 0 corrupt: 25% ━━━───────── 720/2839 474.0it/s 1.5s<4.5s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 774 images, 0 backgrounds, 0 corrupt: 27% ━━━───────── 774/2839 486.2it/s 1.6s<4.2s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 828 images, 0 backgrounds, 0 corrupt: 29% ━━━───────── 828/2839 495.1it/s 1.7s<4.1s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 866 images, 0 backgrounds, 0 corrupt: 30% ━━━╸──────── 866/2839 458.5it/s 1.8s<4.3s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 924 images, 0 backgrounds, 0 corrupt: 32% ━━━╸──────── 924/2839 477.4it/s 1.9s<4.0s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 979 images, 0 backgrounds, 0 corrupt: 34% ━━━━──────── 979/2839 497.2it/s 2.0s<3.7s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1035 images, 0 backgrounds, 0 corrupt: 36% ━━━━──────── 1035/2839 502.7it/s 2.2s<3.6s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1090 images, 0 backgrounds, 0 corrupt: 38% ━━━━╸─────── 1090/2839 514.6it/s 2.3s<3.4s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1144 images, 0 backgrounds, 0 corrupt: 40% ━━━━╸─────── 1144/2839 521.2it/s 2.4s<3.3s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1200 images, 0 backgrounds, 0 corrupt: 42% ━━━━━─────── 1200/2839 525.5it/s 2.5s<3.1s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1257 images, 0 backgrounds, 0 corrupt: 44% ━━━━━─────── 1257/2839 525.8it/s 2.6s<3.0s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1311 images, 0 backgrounds, 0 corrupt: 46% ━━━━━╸────── 1311/2839 517.7it/s 2.7s<3.0s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1365 images, 0 backgrounds, 0 corrupt: 48% ━━━━━╸────── 1365/2839 521.3it/s 2.8s<2.8s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1419 images, 0 backgrounds, 0 corrupt: 49% ━━━━━╸────── 1419/2839 523.5it/s 2.9s<2.7s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1475 images, 0 backgrounds, 0 corrupt: 51% ━━━━━━────── 1475/2839 532.1it/s 3.0s<2.6s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1530 images, 0 backgrounds, 0 corrupt: 53% ━━━━━━────── 1530/2839 536.2it/s 3.1s<2.4s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1581 images, 0 backgrounds, 0 corrupt: 55% ━━━━━━╸───── 1581/2839 527.8it/s 3.2s<2.4s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1636 images, 0 backgrounds, 0 corrupt: 57% ━━━━━━╸───── 1636/2839 533.5it/s 3.3s<2.3s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1689 images, 0 backgrounds, 0 corrupt: 59% ━━━━━━━───── 1689/2839 530.1it/s 3.4s<2.2s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1743 images, 0 backgrounds, 0 corrupt: 61% ━━━━━━━───── 1743/2839 522.2it/s 3.5s<2.1s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1798 images, 0 backgrounds, 0 corrupt: 63% ━━━━━━━╸──── 1798/2839 526.6it/s 3.6s<2.0s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1848 images, 0 backgrounds, 0 corrupt: 65% ━━━━━━━╸──── 1848/2839 518.2it/s 3.7s<1.9s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1903 images, 0 backgrounds, 0 corrupt: 67% ━━━━━━━━──── 1903/2839 527.1it/s 3.8s<1.8s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 1957 images, 0 backgrounds, 0 corrupt: 68% ━━━━━━━━──── 1957/2839 520.1it/s 3.9s<1.7s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2013 images, 0 backgrounds, 0 corrupt: 70% ━━━━━━━━╸─── 2013/2839 527.2it/s 4.0s<1.6s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2066 images, 0 backgrounds, 0 corrupt: 72% ━━━━━━━━╸─── 2066/2839 521.9it/s 4.1s<1.5s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2122 images, 0 backgrounds, 0 corrupt: 74% ━━━━━━━━╸─── 2122/2839 528.7it/s 4.2s<1.4s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2177 images, 0 backgrounds, 0 corrupt: 76% ━━━━━━━━━─── 2177/2839 529.6it/s 4.3s<1.3s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2230 images, 0 backgrounds, 0 corrupt: 78% ━━━━━━━━━─── 2230/2839 529.0it/s 4.4s<1.2s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2281 images, 0 backgrounds, 0 corrupt: 80% ━━━━━━━━━╸── 2281/2839 521.4it/s 4.5s<1.1s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2334 images, 0 backgrounds, 0 corrupt: 82% ━━━━━━━━━╸── 2334/2839 520.1it/s 4.6s<1.0s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2385 images, 0 backgrounds, 0 corrupt: 84% ━━━━━━━━━━── 2385/2839 516.7it/s 4.7s<0.9s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2439 images, 0 backgrounds, 0 corrupt: 85% ━━━━━━━━━━── 2439/2839 521.3it/s 4.8s<0.8s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2489 images, 0 backgrounds, 0 corrupt: 87% ━━━━━━━━━━╸─ 2489/2839 513.5it/s 4.9s<0.7s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2541 images, 0 backgrounds, 0 corrupt: 89% ━━━━━━━━━━╸─ 2541/2839 513.0it/s 5.0s<0.6s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2596 images, 0 backgrounds, 0 corrupt: 91% ━━━━━━━━━━╸─ 2596/2839 516.7it/s 5.1s<0.5s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2648 images, 0 backgrounds, 0 corrupt: 93% ━━━━━━━━━━━─ 2648/2839 517.0it/s 5.2s<0.4s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2698 images, 0 backgrounds, 0 corrupt: 95% ━━━━━━━━━━━─ 2698/2839 511.1it/s 5.3s<0.3s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2749 images, 0 backgrounds, 0 corrupt: 96% ━━━━━━━━━━━╸ 2749/2839 497.1it/s 5.4s<0.2s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2806 images, 0 backgrounds, 0 corrupt: 98% ━━━━━━━━━━━╸ 2806/2839 514.2it/s 5.5s<0.1s[K[34m[1mtrain: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train... 2839 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 2839/2839 506.5it/s 5.6s
+[34m[1mtrain: [0mNew cache created: C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\train.cache
+WARNING [34m[1mval: [0mSlow image access detected (ping: 0.10.0 ms, read: 9.33.2 MB/s, size: 108.3 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips/
+[K[34m[1mval: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\val... 33 images, 0 backgrounds, 0 corrupt: 7% ╸─────────── 33/454 95.5it/s 0.1s<4.4s[K[34m[1mval: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\val... 79 images, 0 backgrounds, 0 corrupt: 17% ━━────────── 79/454 201.2it/s 0.2s<1.9s[K[34m[1mval: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\val... 116 images, 0 backgrounds, 0 corrupt: 25% ━━━───────── 116/454 250.1it/s 0.3s<1.4s[K[34m[1mval: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\val... 153 images, 0 backgrounds, 0 corrupt: 33% ━━━━──────── 153/454 277.5it/s 0.4s<1.1s[K[34m[1mval: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\val... 199 images, 0 backgrounds, 0 corrupt: 43% ━━━━━─────── 199/454 331.7it/s 0.5s<0.8s[K[34m[1mval: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\val... 237 images, 0 backgrounds, 0 corrupt: 52% ━━━━━━────── 237/454 339.3it/s 0.6s<0.6s[K[34m[1mval: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\val... 277 images, 0 backgrounds, 0 corrupt: 61% ━━━━━━━───── 277/454 356.7it/s 0.7s<0.5s[K[34m[1mval: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\val... 318 images, 0 backgrounds, 0 corrupt: 70% ━━━━━━━━──── 318/454 370.3it/s 0.8s<0.4s[K[34m[1mval: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\val... 358 images, 0 backgrounds, 0 corrupt: 78% ━━━━━━━━━─── 358/454 374.4it/s 0.9s<0.3s[K[34m[1mval: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\val... 398 images, 0 backgrounds, 0 corrupt: 87% ━━━━━━━━━━╸─ 398/454 377.0it/s 1.0s<0.1s[K[34m[1mval: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\val... 441 images, 0 backgrounds, 0 corrupt: 97% ━━━━━━━━━━━╸ 441/454 381.7it/s 1.1s<0.0s[K[34m[1mval: [0mScanning C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\val... 454 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 454/454 387.4it/s 1.2s
+[34m[1mval: [0mNew cache created: C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\labels\val.cache
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
+[34m[1moptimizer:[0m AdamW(lr=0.001667, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to [1mC:\Users\prash\Downloads\New folder\medsam-msd-evaluation\results\yolo\liver[0m
+Starting training for 12 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "E:\anaconda3\Lib\multiprocessing\queues.py", line 262, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "E:\anaconda3\Lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "E:\anaconda3\Lib\site-packages\torch\multiprocessing\reductions.py", line 607, in reduce_storage
+    metadata = storage._share_filename_cpu_()
+  File "E:\anaconda3\Lib\site-packages\torch\storage.py", line 450, in wrapper
+    return fn(self, *args, **kwargs)
+  File "E:\anaconda3\Lib\site-packages\torch\storage.py", line 529, in _share_filename_cpu_
+    return super()._share_filename_cpu_(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+RuntimeError: Couldn't open shared file mapping: <torch_2468_2912594107_15>, error code: <1455>
+  File "E:\anaconda3\Lib\multiprocessing\queues.py", line 262, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "E:\anaconda3\Lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "E:\anaconda3\Lib\site-packages\torch\multiprocessing\reductions.py", line 607, in reduce_storage
+    metadata = storage._share_filename_cpu_()
+  File "E:\anaconda3\Lib\site-packages\torch\storage.py", line 450, in wrapper
+    return fn(self, *args, **kwargs)
+  File "E:\anaconda3\Lib\site-packages\torch\storage.py", line 529, in _share_filename_cpu_
+    return super()._share_filename_cpu_(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+RuntimeError: Couldn't open shared file mapping: <torch_10040_3629102819_15>, error code: <1455>
+  File "E:\anaconda3\Lib\multiprocessing\queues.py", line 262, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "E:\anaconda3\Lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "E:\anaconda3\Lib\site-packages\torch\multiprocessing\reductions.py", line 607, in reduce_storage
+    metadata = storage._share_filename_cpu_()
+  File "E:\anaconda3\Lib\site-packages\torch\storage.py", line 450, in wrapper
+    return fn(self, *args, **kwargs)
+  File "E:\anaconda3\Lib\site-packages\torch\storage.py", line 529, in _share_filename_cpu_
+    return super()._share_filename_cpu_(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+RuntimeError: Couldn't open shared file mapping: <torch_17820_4197810772_15>, error code: <1455>
+  File "E:\anaconda3\Lib\multiprocessing\queues.py", line 262, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "E:\anaconda3\Lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "E:\anaconda3\Lib\site-packages\torch\multiprocessing\reductions.py", line 607, in reduce_storage
+    metadata = storage._share_filename_cpu_()
+  File "E:\anaconda3\Lib\site-packages\torch\storage.py", line 450, in wrapper
+    return fn(self, *args, **kwargs)
+  File "E:\anaconda3\Lib\site-packages\torch\storage.py", line 529, in _share_filename_cpu_
+    return super()._share_filename_cpu_(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+RuntimeError: Couldn't open shared file mapping: <torch_25040_2681452087_15>, error code: <1455>
+fatal   : Memory allocation failure
+[K: 0% ──────────── 0/178  4.2s
+Traceback (most recent call last):
+  File "C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\models\auto_prompt_yolo.py", line 306, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\models\auto_prompt_yolo.py", line 299, in main
+    train(a.task, log)
+    ~~~~~^^^^^^^^^^^^^
+  File "C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\models\auto_prompt_yolo.py", line 114, in train
+    model.train(data=str(ROOT / "datasets/yolo" / task / "data.yaml"), epochs=EPOCHS[task], imgsz=YOLO_IMG,
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                batch=16, project=str(ROOT / "results/yolo"), name=task, exist_ok=True, seed=SEED,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                verbose=False, plots=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\anaconda3\Lib\site-packages\ultralytics\engine\model.py", line 814, in train
+    self.trainer.train()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "E:\anaconda3\Lib\site-packages\ultralytics\engine\trainer.py", line 241, in train
+    self._do_train()
+    ~~~~~~~~~~~~~~^^
+  File "E:\anaconda3\Lib\site-packages\ultralytics\engine\trainer.py", line 460, in _do_train
+    loss, self.loss_items = self.model(batch)
+                            ~~~~~~~~~~^^^^^^^
+  File "E:\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "E:\anaconda3\Lib\site-packages\ultralytics\nn\tasks.py", line 153, in forward
+    return self.loss(x, *args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "E:\anaconda3\Lib\site-packages\ultralytics\nn\tasks.py", line 347, in loss
+    return self.criterion(preds, batch)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "E:\anaconda3\Lib\site-packages\ultralytics\utils\loss.py", line 476, in __call__
+    return self.loss(self.parse_output(preds), batch)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\anaconda3\Lib\site-packages\ultralytics\utils\loss.py", line 481, in loss
+    loss, loss_detach = self.get_assigned_targets_and_loss(preds, batch)[1:]
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "E:\anaconda3\Lib\site-packages\ultralytics\utils\loss.py", line 419, in get_assigned_targets_and_loss
+    mask_gt = gt_bboxes.sum(2, keepdim=True).gt_(0.0)
+              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: unknown error
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+2026-11-16 10:23:58,184 == prostate/prostate methods=['sam', 'unet', 'deeplab', 'medsam', 'lora', 'yolo_medsam', 'medsam_point']
+2026-11-16 10:24:01,089 == liver/liver methods=['sam', 'unet', 'deeplab', 'medsam', 'lora', 'medsam_point']
+2026-11-16 10:24:10,925 == liver/tumor methods=['sam', 'unet', 'deeplab', 'medsam', 'lora', 'medsam_point']
+saved boxplot_dsc_prostate_prostate.png
+saved boxplot_nsd_prostate_prostate.png
+saved podium_prostate_prostate.png
+saved overlay_prostate_prostate_prostate_38_z006.png
+saved jitter_curve_prostate_prostate.png
+saved sparse3d_prostate_prostate.png
+saved boxplot_dsc_liver_liver.png
+saved boxplot_nsd_liver_liver.png
+saved podium_liver_liver.png
+saved overlay_liver_liver_liver_111_z320.png
+saved jitter_curve_liver_liver.png
+saved sparse3d_liver_liver.png
+saved boxplot_dsc_liver_tumor.png
+saved boxplot_nsd_liver_tumor.png
+saved podium_liver_tumor.png
+saved overlay_liver_tumor_liver_104_z384.png
+saved overlay_liver_tumor_liver_104_z283.png
+saved jitter_curve_liver_tumor.png
+saved sparse3d_liver_tumor.png
+2026-11-16 10:24:20,740 wrote REPORT.md: 19 summary rows, 32 wilcoxon rows, 19 figures
+wrote C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\results\REPORT.md
+EXIT=0

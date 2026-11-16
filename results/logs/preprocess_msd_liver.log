@@ -1,0 +1,5 @@
+2026-11-16 04:31:43,931 liver: 40 volumes -> train=32, val=4, test=4
+2026-11-16 04:42:22,879 train: 32 volumes, 5678 npz slices, targets={'liver': 5678, 'tumor': 2482}
+2026-11-16 04:44:05,280 val: 4 volumes, 908 npz slices, targets={'liver': 908, 'tumor': 235}
+2026-11-16 04:45:21,733 test: 4 volumes, 625 npz slices, targets={'liver': 624, 'tumor': 343}
+2026-11-16 04:45:22,074 wrote C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\npz\liver\volumes.json and C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\results\tables\dataset_stats.csv

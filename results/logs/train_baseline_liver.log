@@ -1,0 +1,32 @@
+2026-11-16 07:24:01,077 args {'model': 'unet', 'task': 'liver', 'target': 'liver', 'epochs': 6, 'bs': 16, 'lr': 0.0001, 'wd': 0.01} epochs=6 device=cuda
+2026-11-16 07:25:26,976 unet/liver/liver epoch 1 loss 0.9039 val_dsc 0.9134
+2026-11-16 07:26:47,329 unet/liver/liver epoch 2 loss 0.4129 val_dsc 0.9338
+2026-11-16 07:28:11,947 unet/liver/liver epoch 3 loss 0.1834 val_dsc 0.9243
+2026-11-16 07:29:40,925 unet/liver/liver epoch 4 loss 0.1041 val_dsc 0.9501
+2026-11-16 07:31:12,311 unet/liver/liver epoch 5 loss 0.0776 val_dsc 0.9524
+2026-11-16 07:32:45,766 unet/liver/liver epoch 6 loss 0.0638 val_dsc 0.9500
+2026-11-16 07:32:45,772 unet/liver/liver done: best val_dsc 0.9524 @ep5, 388s, peak 1345 MB
+2026-11-16 07:34:04,231 args {'model': 'deeplab', 'task': 'liver', 'target': 'liver', 'epochs': 6, 'bs': 16, 'lr': 0.0001, 'wd': 0.01} epochs=6 device=cuda
+2026-11-16 07:35:40,157 deeplab/liver/liver epoch 1 loss 0.4935 val_dsc 0.9184
+2026-11-16 07:37:26,723 deeplab/liver/liver epoch 2 loss 0.1405 val_dsc 0.9348
+2026-11-16 07:39:23,167 deeplab/liver/liver epoch 3 loss 0.0883 val_dsc 0.9374
+2026-11-16 07:41:25,806 deeplab/liver/liver epoch 4 loss 0.0715 val_dsc 0.9431
+2026-11-16 07:43:31,649 deeplab/liver/liver epoch 5 loss 0.0642 val_dsc 0.9470
+2026-11-16 07:45:41,847 deeplab/liver/liver epoch 6 loss 0.0589 val_dsc 0.9409
+2026-11-16 07:45:41,849 deeplab/liver/liver done: best val_dsc 0.9470 @ep5, 563s, peak 1910 MB
+2026-11-16 07:47:01,008 args {'model': 'unet', 'task': 'liver', 'target': 'tumor', 'epochs': 6, 'bs': 16, 'lr': 0.0001, 'wd': 0.01} epochs=6 device=cuda
+2026-11-16 07:47:46,627 unet/liver/tumor epoch 1 loss 1.3830 val_dsc 0.5236
+2026-11-16 07:48:33,779 unet/liver/tumor epoch 2 loss 1.0849 val_dsc 0.6000
+2026-11-16 07:49:21,747 unet/liver/tumor epoch 3 loss 0.8793 val_dsc 0.6202
+2026-11-16 07:50:10,695 unet/liver/tumor epoch 4 loss 0.7331 val_dsc 0.6994
+2026-11-16 07:50:59,973 unet/liver/tumor epoch 5 loss 0.6220 val_dsc 0.6917
+2026-11-16 07:51:49,775 unet/liver/tumor epoch 6 loss 0.5193 val_dsc 0.6066
+2026-11-16 07:51:49,777 unet/liver/tumor done: best val_dsc 0.6994 @ep4, 249s, peak 1345 MB
+2026-11-16 07:52:34,341 args {'model': 'deeplab', 'task': 'liver', 'target': 'tumor', 'epochs': 6, 'bs': 16, 'lr': 0.0001, 'wd': 0.01} epochs=6 device=cuda
+2026-11-16 07:53:25,415 deeplab/liver/tumor epoch 1 loss 1.0732 val_dsc 0.5425
+2026-11-16 07:54:16,949 deeplab/liver/tumor epoch 2 loss 0.7187 val_dsc 0.5890
+2026-11-16 07:55:10,269 deeplab/liver/tumor epoch 3 loss 0.5326 val_dsc 0.3933
+2026-11-16 07:56:04,745 deeplab/liver/tumor epoch 4 loss 0.4074 val_dsc 0.6178
+2026-11-16 07:57:01,413 deeplab/liver/tumor epoch 5 loss 0.3050 val_dsc 0.5928
+2026-11-16 07:57:58,659 deeplab/liver/tumor epoch 6 loss 0.2427 val_dsc 0.6545
+2026-11-16 07:57:58,794 deeplab/liver/tumor done: best val_dsc 0.6545 @ep6, 283s, peak 1910 MB

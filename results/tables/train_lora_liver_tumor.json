@@ -1,0 +1,29 @@
+{
+  "task": "liver",
+  "target": "tumor",
+  "mode": "LORA",
+  "fallback": null,
+  "rank": 4,
+  "epochs": 1,
+  "lr": 0.0001,
+  "wd": 0.01,
+  "accum": 8,
+  "bs": 1,
+  "max_steps": 150,
+  "optimizer_steps": 150,
+  "best_val_dsc": 0.6396486655622721,
+  "best_epoch": 1,
+  "history": [
+    {
+      "epoch": 1,
+      "steps": 150,
+      "val_dsc": 0.6396486655622721
+    }
+  ],
+  "train_seconds": 2452.401484966278,
+  "steps_per_sec": 0.06116453644296443,
+  "peak_vram_mb": 3696.76611328125,
+  "trainable_params": 4205796,
+  "total_params": 93882928,
+  "checkpoint": "checkpoints\\lora_liver_tumor.pth"
+}

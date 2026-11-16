@@ -1,0 +1,48 @@
+{
+  "task": "liver",
+  "target": "liver",
+  "model": "unet",
+  "epochs": 6,
+  "bs": 16,
+  "lr": 0.0001,
+  "wd": 0.01,
+  "best_val_dsc": 0.952383315412221,
+  "best_epoch": 5,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.9039331662822777,
+      "val_dsc": 0.9133609739349671
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.41289903848943577,
+      "val_dsc": 0.9338083365185408
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.18338618952203806,
+      "val_dsc": 0.9242981622397637
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.10405271899112513,
+      "val_dsc": 0.9501402922188001
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.07759208182843638,
+      "val_dsc": 0.952383315412221
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.06382863707315754,
+      "val_dsc": 0.9499948199362481
+    }
+  ],
+  "train_seconds": 387.9334394931793,
+  "peak_vram_mb": 1344.84130859375,
+  "trainable_params": 24439505,
+  "total_params": 24439505,
+  "checkpoint": "checkpoints\\unet_liver_liver.pth"
+}

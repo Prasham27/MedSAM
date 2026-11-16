@@ -1,0 +1,54 @@
+2026-11-16 03:50:58,386 args {'model': 'unet', 'task': 'prostate', 'target': 'prostate', 'epochs': None, 'bs': 16, 'lr': 0.0001, 'wd': 0.01} epochs=25 device=cuda
+2026-11-16 03:53:49,534 unet/prostate/prostate epoch 1 loss 1.5927 val_dsc 0.1812
+2026-11-16 03:54:17,613 unet/prostate/prostate epoch 2 loss 1.3319 val_dsc 0.6085
+2026-11-16 03:54:47,194 unet/prostate/prostate epoch 3 loss 1.2290 val_dsc 0.8312
+2026-11-16 03:55:17,017 unet/prostate/prostate epoch 4 loss 1.1774 val_dsc 0.8953
+2026-11-16 03:55:45,989 unet/prostate/prostate epoch 5 loss 1.1367 val_dsc 0.9039
+2026-11-16 03:56:13,820 unet/prostate/prostate epoch 6 loss 1.0999 val_dsc 0.8992
+2026-11-16 03:56:42,012 unet/prostate/prostate epoch 7 loss 1.0644 val_dsc 0.8967
+2026-11-16 03:57:14,615 unet/prostate/prostate epoch 8 loss 1.0294 val_dsc 0.8959
+2026-11-16 03:57:42,883 unet/prostate/prostate epoch 9 loss 0.9840 val_dsc 0.9023
+2026-11-16 03:58:14,314 unet/prostate/prostate epoch 10 loss 0.9409 val_dsc 0.9032
+2026-11-16 03:58:42,750 unet/prostate/prostate epoch 11 loss 0.8989 val_dsc 0.9087
+2026-11-16 03:59:10,737 unet/prostate/prostate epoch 12 loss 0.8585 val_dsc 0.8748
+2026-11-16 03:59:38,533 unet/prostate/prostate epoch 13 loss 0.8173 val_dsc 0.9028
+2026-11-16 04:00:07,692 unet/prostate/prostate epoch 14 loss 0.7850 val_dsc 0.9073
+2026-11-16 04:00:35,330 unet/prostate/prostate epoch 15 loss 0.7455 val_dsc 0.8972
+2026-11-16 04:01:03,513 unet/prostate/prostate epoch 16 loss 0.7080 val_dsc 0.8732
+2026-11-16 04:01:31,237 unet/prostate/prostate epoch 17 loss 0.6672 val_dsc 0.9018
+2026-11-16 04:01:59,233 unet/prostate/prostate epoch 18 loss 0.6316 val_dsc 0.9023
+2026-11-16 04:02:26,873 unet/prostate/prostate epoch 19 loss 0.5984 val_dsc 0.8908
+2026-11-16 04:02:54,827 unet/prostate/prostate epoch 20 loss 0.5598 val_dsc 0.9112
+2026-11-16 04:03:22,882 unet/prostate/prostate epoch 21 loss 0.5270 val_dsc 0.8852
+2026-11-16 04:03:50,397 unet/prostate/prostate epoch 22 loss 0.4996 val_dsc 0.8787
+2026-11-16 04:04:18,008 unet/prostate/prostate epoch 23 loss 0.4727 val_dsc 0.8720
+2026-11-16 04:04:45,768 unet/prostate/prostate epoch 24 loss 0.4413 val_dsc 0.8893
+2026-11-16 04:05:13,594 unet/prostate/prostate epoch 25 loss 0.4159 val_dsc 0.8748
+2026-11-16 04:05:13,601 unet/prostate/prostate done: best val_dsc 0.9112 @ep20, 562s, peak 1346 MB
+2026-11-16 04:05:29,372 args {'model': 'deeplab', 'task': 'prostate', 'target': 'prostate', 'epochs': None, 'bs': 16, 'lr': 0.0001, 'wd': 0.01} epochs=25 device=cuda
+2026-11-16 04:06:26,860 deeplab/prostate/prostate epoch 1 loss 1.3010 val_dsc 0.7142
+2026-11-16 04:06:55,184 deeplab/prostate/prostate epoch 2 loss 1.0076 val_dsc 0.8565
+2026-11-16 04:07:23,207 deeplab/prostate/prostate epoch 3 loss 0.8399 val_dsc 0.8741
+2026-11-16 04:07:51,420 deeplab/prostate/prostate epoch 4 loss 0.7320 val_dsc 0.8717
+2026-11-16 04:08:19,161 deeplab/prostate/prostate epoch 5 loss 0.6463 val_dsc 0.8597
+2026-11-16 04:08:47,335 deeplab/prostate/prostate epoch 6 loss 0.5797 val_dsc 0.8390
+2026-11-16 04:09:16,525 deeplab/prostate/prostate epoch 7 loss 0.5218 val_dsc 0.8597
+2026-11-16 04:09:44,495 deeplab/prostate/prostate epoch 8 loss 0.4751 val_dsc 0.8789
+2026-11-16 04:10:12,533 deeplab/prostate/prostate epoch 9 loss 0.4281 val_dsc 0.8541
+2026-11-16 04:10:40,460 deeplab/prostate/prostate epoch 10 loss 0.3896 val_dsc 0.8461
+2026-11-16 04:11:08,493 deeplab/prostate/prostate epoch 11 loss 0.3552 val_dsc 0.8884
+2026-11-16 04:11:36,641 deeplab/prostate/prostate epoch 12 loss 0.3213 val_dsc 0.8788
+2026-11-16 04:12:05,118 deeplab/prostate/prostate epoch 13 loss 0.2906 val_dsc 0.8853
+2026-11-16 04:12:33,083 deeplab/prostate/prostate epoch 14 loss 0.2641 val_dsc 0.8385
+2026-11-16 04:13:00,665 deeplab/prostate/prostate epoch 15 loss 0.2412 val_dsc 0.8715
+2026-11-16 04:13:28,791 deeplab/prostate/prostate epoch 16 loss 0.2216 val_dsc 0.8618
+2026-11-16 04:13:56,887 deeplab/prostate/prostate epoch 17 loss 0.2031 val_dsc 0.8751
+2026-11-16 04:14:24,860 deeplab/prostate/prostate epoch 18 loss 0.1901 val_dsc 0.8928
+2026-11-16 04:14:53,023 deeplab/prostate/prostate epoch 19 loss 0.1778 val_dsc 0.8787
+2026-11-16 04:15:21,198 deeplab/prostate/prostate epoch 20 loss 0.1637 val_dsc 0.8781
+2026-11-16 04:15:51,203 deeplab/prostate/prostate epoch 21 loss 0.1488 val_dsc 0.8457
+2026-11-16 04:16:18,986 deeplab/prostate/prostate epoch 22 loss 0.1424 val_dsc 0.8664
+2026-11-16 04:16:47,179 deeplab/prostate/prostate epoch 23 loss 0.1355 val_dsc 0.8764
+2026-11-16 04:17:15,201 deeplab/prostate/prostate epoch 24 loss 0.1276 val_dsc 0.8664
+2026-11-16 04:17:43,797 deeplab/prostate/prostate epoch 25 loss 0.1193 val_dsc 0.8928
+2026-11-16 04:17:43,803 deeplab/prostate/prostate done: best val_dsc 0.8928 @ep18, 554s, peak 1909 MB

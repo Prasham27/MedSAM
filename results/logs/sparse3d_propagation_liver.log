@@ -1,0 +1,36 @@
+2026-11-16 07:20:57,150 args {'task': 'liver', 'target': 'liver', 'split': 'test', 'ks': '1,3,5,10'} device=cuda
+2026-11-16 07:21:10,705 liver_1 k=1 n_boxes=27 dsc3d 0.9495 nsd3d 0.8391 0.69s
+2026-11-16 07:21:11,934 liver_1 k=3 n_boxes=10 dsc3d 0.9454 nsd3d 0.8192 0.27s
+2026-11-16 07:21:13,155 liver_1 k=5 n_boxes=7 dsc3d 0.9373 nsd3d 0.7773 0.26s
+2026-11-16 07:21:14,364 liver_1 k=10 n_boxes=4 dsc3d 0.9090 nsd3d 0.6989 0.26s
+2026-11-16 07:21:20,973 liver_104 k=1 n_boxes=194 dsc3d 0.9407 nsd3d 0.7364 1.91s
+2026-11-16 07:21:28,523 liver_104 k=3 n_boxes=66 dsc3d 0.9400 nsd3d 0.7338 2.78s
+2026-11-16 07:21:36,367 liver_104 k=5 n_boxes=40 dsc3d 0.9396 nsd3d 0.7314 2.93s
+2026-11-16 07:21:44,269 liver_104 k=10 n_boxes=21 dsc3d 0.9385 nsd3d 0.7270 2.91s
+2026-11-16 07:21:55,231 liver_111 k=1 n_boxes=233 dsc3d 0.9801 nsd3d 0.9533 3.51s
+2026-11-16 07:22:05,169 liver_111 k=3 n_boxes=79 dsc3d 0.9803 nsd3d 0.9578 2.39s
+2026-11-16 07:22:15,184 liver_111 k=5 n_boxes=48 dsc3d 0.9801 nsd3d 0.9541 2.40s
+2026-11-16 07:22:25,148 liver_111 k=10 n_boxes=25 dsc3d 0.9784 nsd3d 0.9392 2.40s
+2026-11-16 07:22:33,113 liver_113 k=1 n_boxes=170 dsc3d 0.9665 nsd3d 0.9019 2.44s
+2026-11-16 07:22:41,068 liver_113 k=3 n_boxes=58 dsc3d 0.9664 nsd3d 0.9019 2.34s
+2026-11-16 07:22:49,303 liver_113 k=5 n_boxes=35 dsc3d 0.9663 nsd3d 0.9012 2.67s
+2026-11-16 07:22:56,700 liver_113 k=10 n_boxes=18 dsc3d 0.9644 nsd3d 0.8914 1.88s
+2026-11-16 07:22:56,707 wrote 16 rows to sparse3d.csv
+2026-11-16 07:23:02,650 args {'task': 'liver', 'target': 'tumor', 'split': 'test', 'ks': '1,3,5,10'} device=cuda
+2026-11-16 07:23:10,428 liver_1 k=1 n_boxes=18 dsc3d 0.1116 nsd3d 0.1822 0.60s
+2026-11-16 07:23:11,032 liver_1 k=3 n_boxes=7 dsc3d 0.0923 nsd3d 0.1985 0.18s
+2026-11-16 07:23:11,612 liver_1 k=5 n_boxes=5 dsc3d 0.0800 nsd3d 0.1157 0.17s
+2026-11-16 07:23:12,166 liver_1 k=10 n_boxes=3 dsc3d 0.0562 nsd3d 0.0922 0.18s
+2026-11-16 07:23:15,569 liver_104 k=1 n_boxes=113 dsc3d 0.8184 nsd3d 0.7029 1.09s
+2026-11-16 07:23:19,013 liver_104 k=3 n_boxes=39 dsc3d 0.8187 nsd3d 0.7074 1.10s
+2026-11-16 07:23:23,027 liver_104 k=5 n_boxes=24 dsc3d 0.8114 nsd3d 0.6994 1.63s
+2026-11-16 07:23:27,100 liver_104 k=10 n_boxes=13 dsc3d 0.8016 nsd3d 0.6724 1.73s
+2026-11-16 07:23:29,921 liver_111 k=1 n_boxes=81 dsc3d 0.2768 nsd3d 0.4357 1.14s
+2026-11-16 07:23:32,658 liver_111 k=3 n_boxes=28 dsc3d 0.3052 nsd3d 0.4434 1.11s
+2026-11-16 07:23:35,386 liver_111 k=5 n_boxes=17 dsc3d 0.3303 nsd3d 0.4047 1.10s
+2026-11-16 07:23:38,242 liver_111 k=10 n_boxes=9 dsc3d 0.1984 nsd3d 0.2920 1.16s
+2026-11-16 07:23:42,839 liver_113 k=1 n_boxes=131 dsc3d 0.4267 nsd3d 0.4195 1.91s
+2026-11-16 07:23:47,448 liver_113 k=3 n_boxes=45 dsc3d 0.4301 nsd3d 0.4197 1.91s
+2026-11-16 07:23:51,581 liver_113 k=5 n_boxes=27 dsc3d 0.4318 nsd3d 0.4281 1.46s
+2026-11-16 07:23:55,727 liver_113 k=10 n_boxes=14 dsc3d 0.4560 nsd3d 0.4527 1.50s
+2026-11-16 07:23:55,756 wrote 16 rows to sparse3d.csv

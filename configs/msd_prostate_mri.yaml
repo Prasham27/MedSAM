@@ -1,0 +1,10 @@
+task: prostate
+raw_dir: datasets/raw/Task05_Prostate
+npz_dir: datasets/npz/prostate
+modality: MRI
+percentile_clip: [0.5, 99.5]
+labels: {prostate: [1, 2]}        # list => union of labels into one binary mask
+max_volumes: null
+split: {train: 0.8, val: 0.1, test: 0.1}
+min_mask_pixels: 100              # in 1024x1024 space
+image_size: 1024

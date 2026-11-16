@@ -1,0 +1,48 @@
+{
+  "task": "liver",
+  "target": "liver",
+  "model": "deeplab",
+  "epochs": 6,
+  "bs": 16,
+  "lr": 0.0001,
+  "wd": 0.01,
+  "best_val_dsc": 0.9469549329007775,
+  "best_epoch": 5,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.493478537025586,
+      "val_dsc": 0.9184050677171888
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.14053699884196402,
+      "val_dsc": 0.9347999544592681
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.08826528823291752,
+      "val_dsc": 0.9373686079280492
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.07149922948488048,
+      "val_dsc": 0.9431106945918257
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.06423411389261904,
+      "val_dsc": 0.9469549329007775
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.05894919897259121,
+      "val_dsc": 0.9408877540527462
+    }
+  ],
+  "train_seconds": 562.7833287715912,
+  "peak_vram_mb": 1909.7197265625,
+  "trainable_params": 26680721,
+  "total_params": 26680721,
+  "checkpoint": "checkpoints\\deeplab_liver_liver.pth"
+}

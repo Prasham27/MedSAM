@@ -1,0 +1,14 @@
+2026-11-16 03:50:47,720 args {'task': 'prostate', 'target': 'prostate', 'split': 'test', 'ks': '1,3,5,10'} device=cuda
+2026-11-16 03:50:50,082 prostate_00 k=1 n_boxes=14 dsc3d 0.9454 nsd3d 0.9737 0.63s
+2026-11-16 03:50:50,296 prostate_00 k=3 n_boxes=6 dsc3d 0.8992 nsd3d 0.8663 0.15s
+2026-11-16 03:50:50,508 prostate_00 k=5 n_boxes=4 dsc3d 0.8624 nsd3d 0.7825 0.15s
+2026-11-16 03:50:50,751 prostate_00 k=10 n_boxes=3 dsc3d 0.6078 nsd3d 0.4325 0.15s
+2026-11-16 03:50:50,945 prostate_13 k=1 n_boxes=13 dsc3d 0.9450 nsd3d 0.9750 0.14s
+2026-11-16 03:50:51,133 prostate_13 k=3 n_boxes=5 dsc3d 0.8973 nsd3d 0.8656 0.13s
+2026-11-16 03:50:51,320 prostate_13 k=5 n_boxes=4 dsc3d 0.8738 nsd3d 0.8347 0.13s
+2026-11-16 03:50:51,504 prostate_13 k=10 n_boxes=3 dsc3d 0.5714 nsd3d 0.4166 0.13s
+2026-11-16 03:50:51,852 prostate_38 k=1 n_boxes=20 dsc3d 0.9512 nsd3d 0.9121 0.20s
+2026-11-16 03:50:52,198 prostate_38 k=3 n_boxes=8 dsc3d 0.9441 nsd3d 0.8696 0.20s
+2026-11-16 03:50:52,543 prostate_38 k=5 n_boxes=5 dsc3d 0.9366 nsd3d 0.8334 0.20s
+2026-11-16 03:50:52,879 prostate_38 k=10 n_boxes=3 dsc3d 0.8468 nsd3d 0.5311 0.19s
+2026-11-16 03:50:52,880 wrote 12 rows to sparse3d.csv

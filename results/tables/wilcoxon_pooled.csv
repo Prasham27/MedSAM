@@ -1,0 +1,9 @@
+metric,method,ref_method,n_pairs,median_diff_medsam_minus_method,p_value
+dsc3d,sam,medsam,11,0.0455,0.001
+dsc3d,unet,medsam,11,0.0004,0.8984
+dsc3d,deeplab,medsam,11,-0.0015,0.5195
+dsc3d,lora,medsam,11,-0.0082,0.001
+nsd3d,sam,medsam,11,0.0605,0.001
+nsd3d,unet,medsam,11,-0.0115,0.8311
+nsd3d,deeplab,medsam,11,-0.0071,0.5771
+nsd3d,lora,medsam,11,-0.011,0.4131

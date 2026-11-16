@@ -1,0 +1,8 @@
+﻿# Large/regenerable artifacts (see HANDOFF.md for how to recreate them)
+cache/
+checkpoints/
+datasets/
+*.pt
+*.pth
+__pycache__/
+*.pyc

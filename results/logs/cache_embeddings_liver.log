@@ -1,0 +1,8 @@
+2026-11-16 05:34:33,986 medsam liver/val: 908 to encode
+2026-11-16 05:58:36,283 done: wrote 908 embeddings to C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\cache\medsam\liver\val
+2026-11-16 05:58:42,758 medsam liver/test: 625 to encode
+2026-11-16 06:15:28,974 done: wrote 625 embeddings to C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\cache\medsam\liver\test
+2026-11-16 06:15:35,357 sam liver/val: 908 to encode
+2026-11-16 06:40:10,773 done: wrote 908 embeddings to C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\cache\sam\liver\val
+2026-11-16 06:40:17,269 sam liver/test: 625 to encode
+2026-11-16 06:57:12,389 done: wrote 625 embeddings to C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\cache\sam\liver\test

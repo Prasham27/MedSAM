@@ -1,0 +1,26 @@
+2026-11-16 10:16:33,423 args {'task': 'liver', 'stage': 'export'} device=cuda
+2026-11-16 10:16:33,423 == stage export
+2026-11-16 10:17:46,715 export: wrote C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\data.yaml counts={'train': {'images': 2839, 'with_target_box': 2839}, 'val': {'images': 454, 'with_target_box': 454}}
+2026-11-16 10:17:46,717 done
+2026-11-16 10:21:08,851 args {'task': 'liver', 'stage': 'all'} device=cuda
+2026-11-16 10:21:08,851 == stage export
+2026-11-16 10:21:08,851 export: C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\liver\data.yaml exists, skipping
+2026-11-16 10:21:08,851 == stage train
+2026-11-16 10:25:35,535 args {'task': 'liver', 'stage': 'train'} device=cuda
+2026-11-16 10:25:35,536 == stage train
+2026-11-16 10:38:11,510 train: done, best weights C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\results\yolo\liver\weights\best.pt exists=True
+2026-11-16 10:38:11,510 done
+2026-11-16 10:38:18,963 args {'task': 'liver', 'stage': 'eval'} device=cuda
+2026-11-16 10:38:18,963 == stage eval
+2026-11-16 10:39:00,384 liver liver_1: dsc3d 0.9437 nsd3d 0.8132 dsc3d_pp 0.9437 slices 27
+2026-11-16 10:39:13,167 liver liver_104: dsc3d 0.9267 nsd3d 0.6471 dsc3d_pp 0.8895 slices 194
+2026-11-16 10:39:33,533 liver liver_111: dsc3d 0.9482 nsd3d 0.7588 dsc3d_pp 0.9229 slices 233
+2026-11-16 10:39:46,494 liver liver_113: dsc3d 0.9553 nsd3d 0.8291 dsc3d_pp 0.9545 slices 170
+2026-11-16 10:39:47,745 tumor liver_1: dsc3d 0.0629 nsd3d 0.1247 dsc3d_pp 0.0285 slices 18
+2026-11-16 10:39:55,255 tumor liver_104: dsc3d 0.0849 nsd3d 0.0808 dsc3d_pp 0.0587 slices 113
+2026-11-16 10:39:57,202 tumor liver_111: dsc3d 0.0000 nsd3d 0.0000 dsc3d_pp 0.0000 slices 81
+2026-11-16 10:40:04,246 tumor liver_113: dsc3d 0.1510 nsd3d 0.2253 dsc3d_pp 0.1249 slices 131
+2026-11-16 10:40:04,249 benchmark.csv: wrote 8 yolo_medsam rows
+2026-11-16 10:40:04,250 liver: recall 0.9135 mean IoU(det) 0.8865671780113069 median dsc3d 0.9460
+2026-11-16 10:40:04,251 tumor: recall 0.1458 mean IoU(det) 0.2628775413442067 median dsc3d 0.0739
+2026-11-16 10:40:04,341 done

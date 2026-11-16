@@ -1,0 +1,6 @@
+Found existing installation: torch 2.15.0
+Uninstalling torch-2.15.0:
+  Successfully uninstalled torch-2.15.0
+Found existing installation: torchvision 0.29.2
+Uninstalling torchvision-0.29.2:
+  Successfully uninstalled torchvision-0.29.2

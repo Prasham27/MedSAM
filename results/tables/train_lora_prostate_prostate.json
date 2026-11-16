@@ -1,0 +1,39 @@
+{
+  "task": "prostate",
+  "target": "prostate",
+  "mode": "LORA",
+  "fallback": null,
+  "rank": 4,
+  "epochs": 3,
+  "lr": 0.0001,
+  "wd": 0.01,
+  "accum": 8,
+  "bs": 1,
+  "max_steps": 144,
+  "optimizer_steps": 144,
+  "best_val_dsc": 0.9450281987003252,
+  "best_epoch": 3,
+  "history": [
+    {
+      "epoch": 1,
+      "steps": 48,
+      "val_dsc": 0.9386834841148526
+    },
+    {
+      "epoch": 2,
+      "steps": 96,
+      "val_dsc": 0.9410392279718437
+    },
+    {
+      "epoch": 3,
+      "steps": 144,
+      "val_dsc": 0.9450281987003252
+    }
+  ],
+  "train_seconds": 2574.4676761627197,
+  "steps_per_sec": 0.05593389318238946,
+  "peak_vram_mb": 3696.76611328125,
+  "trainable_params": 4205796,
+  "total_params": 93882928,
+  "checkpoint": "checkpoints\\lora_prostate_prostate.pth"
+}

@@ -1,0 +1,21 @@
+2026-11-16 04:18:00,920 args {'task': 'prostate', 'target': 'prostate', 'rank': 4, 'epochs': 8, 'lr': 0.0001, 'wd': 0.01, 'accum': 8, 'bs': 1, 'max_steps': 600, 'decoder_only': False} device=cuda max_steps=600
+2026-11-16 04:19:13,073 args {'task': 'prostate', 'target': 'prostate', 'rank': 4, 'epochs': 8, 'lr': 0.0001, 'wd': 0.01, 'accum': 8, 'bs': 1, 'max_steps': 600, 'decoder_only': False} device=cuda max_steps=600
+2026-11-16 04:21:27,711 prostate/prostate/lora step 20/384 ep 1 loss 0.0584 lr 4.20e-05
+2026-11-16 04:25:16,215 prostate/prostate/lora step 40/384 ep 1 loss 0.0543 lr 8.20e-05
+2026-11-16 04:27:37,486 prostate/prostate/lora epoch 1 val_dsc 0.9390 (n=51)
+2026-11-16 04:30:47,862 prostate/prostate/lora step 60/384 ep 2 loss 0.0550 lr 9.98e-05
+2026-11-16 04:38:11,670 prostate/prostate/lora step 80/384 ep 2 loss 0.0494 lr 9.80e-05
+2026-11-16 04:45:03,385 prostate/prostate/lora epoch 2 val_dsc 0.9424 (n=51)
+2026-11-16 04:46:51,318 prostate/prostate/lora step 100/384 ep 3 loss 0.0472 lr 9.46e-05
+2026-11-16 04:49:02,873 args {'task': 'prostate', 'target': 'prostate', 'rank': 4, 'epochs': 3, 'lr': 0.0001, 'wd': 0.01, 'accum': 8, 'bs': 1, 'max_steps': 150, 'decoder_only': False} device=cuda max_steps=150
+2026-11-16 04:54:41,847 prostate/prostate/lora step 20/144 ep 1 loss 0.0585 lr 4.20e-05
+2026-11-16 05:00:50,454 prostate/prostate/lora step 40/144 ep 1 loss 0.0543 lr 8.20e-05
+2026-11-16 05:03:45,969 prostate/prostate/lora epoch 1 val_dsc 0.9387 (n=51)
+2026-11-16 05:07:16,490 prostate/prostate/lora step 60/144 ep 2 loss 0.0551 lr 9.72e-05
+2026-11-16 05:13:19,963 prostate/prostate/lora step 80/144 ep 2 loss 0.0493 lr 7.69e-05
+2026-11-16 05:18:52,571 prostate/prostate/lora epoch 2 val_dsc 0.9410 (n=51)
+2026-11-16 05:20:00,133 prostate/prostate/lora step 100/144 ep 3 loss 0.0468 lr 4.50e-05
+2026-11-16 05:26:03,578 prostate/prostate/lora step 120/144 ep 3 loss 0.0501 lr 1.52e-05
+2026-11-16 05:32:19,772 prostate/prostate/lora step 140/144 ep 3 loss 0.0476 lr 4.46e-07
+2026-11-16 05:33:54,675 prostate/prostate/lora epoch 3 val_dsc 0.9450 (n=51)
+2026-11-16 05:33:54,713 prostate/prostate/lora done: best val_dsc 0.9450 @ep3, 144 opt steps, 0.056 steps/s, peak 3697 MB

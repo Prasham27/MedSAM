@@ -1,0 +1,6 @@
+2026-11-16 03:52:28,926 == prostate/prostate methods=['sam', 'medsam', 'medsam_point']
+2026-11-16 09:39:36,324 == prostate/prostate methods=['sam', 'unet', 'deeplab', 'medsam', 'lora', 'medsam_point']
+2026-11-16 10:23:58,184 == prostate/prostate methods=['sam', 'unet', 'deeplab', 'medsam', 'lora', 'yolo_medsam', 'medsam_point']
+2026-11-16 10:40:08,699 == prostate/prostate methods=['sam', 'unet', 'deeplab', 'medsam', 'lora', 'yolo_medsam', 'medsam_point']
+2026-11-16 10:41:20,988 == prostate/prostate methods=['sam', 'unet', 'deeplab', 'medsam', 'lora', 'yolo_medsam', 'medsam_point']
+2026-11-16 10:41:40,169 == prostate/prostate methods=['sam', 'unet', 'deeplab', 'medsam', 'lora', 'yolo_medsam', 'medsam_point']

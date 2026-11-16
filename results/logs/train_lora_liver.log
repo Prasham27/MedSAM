@@ -1,0 +1,20 @@
+2026-11-16 07:58:43,206 args {'task': 'liver', 'target': 'tumor', 'rank': 4, 'epochs': 1, 'lr': 0.0001, 'wd': 0.01, 'accum': 8, 'bs': 1, 'max_steps': 150, 'decoder_only': False} device=cuda max_steps=150
+2026-11-16 08:03:04,267 liver/tumor/lora step 20/150 ep 1 loss 0.4696 lr 4.20e-05
+2026-11-16 08:08:21,657 liver/tumor/lora step 40/150 ep 1 loss 0.3801 lr 8.20e-05
+2026-11-16 08:13:49,410 liver/tumor/lora step 60/150 ep 1 loss 0.2680 lr 9.76e-05
+2026-11-16 08:19:21,010 liver/tumor/lora step 80/150 ep 1 loss 0.2496 lr 7.94e-05
+2026-11-16 08:24:57,269 liver/tumor/lora step 100/150 ep 1 loss 0.2324 lr 5.00e-05
+2026-11-16 08:30:43,117 liver/tumor/lora step 120/150 ep 1 loss 0.2478 lr 2.06e-05
+2026-11-16 08:36:39,018 liver/tumor/lora step 140/150 ep 1 loss 0.2578 lr 2.45e-06
+2026-11-16 08:41:50,207 liver/tumor/lora epoch 1 val_dsc 0.6396 (n=200)
+2026-11-16 08:41:50,237 liver/tumor/lora done: best val_dsc 0.6396 @ep1, 150 opt steps, 0.061 steps/s, peak 3697 MB
+2026-11-16 08:46:12,323 args {'task': 'liver', 'target': 'liver', 'rank': 4, 'epochs': 1, 'lr': 0.0001, 'wd': 0.01, 'accum': 8, 'bs': 1, 'max_steps': 150, 'decoder_only': False} device=cuda max_steps=150
+2026-11-16 08:51:25,389 liver/liver/lora step 20/150 ep 1 loss 0.1234 lr 4.20e-05
+2026-11-16 08:57:16,014 liver/liver/lora step 40/150 ep 1 loss 0.0852 lr 8.20e-05
+2026-11-16 09:03:10,637 liver/liver/lora step 60/150 ep 1 loss 0.0790 lr 9.76e-05
+2026-11-16 09:09:02,593 liver/liver/lora step 80/150 ep 1 loss 0.0792 lr 7.94e-05
+2026-11-16 09:14:51,370 liver/liver/lora step 100/150 ep 1 loss 0.0748 lr 5.00e-05
+2026-11-16 09:20:46,864 liver/liver/lora step 120/150 ep 1 loss 0.0747 lr 2.06e-05
+2026-11-16 09:26:40,399 liver/liver/lora step 140/150 ep 1 loss 0.0793 lr 2.45e-06
+2026-11-16 09:31:43,781 liver/liver/lora epoch 1 val_dsc 0.9509 (n=200)
+2026-11-16 09:31:43,811 liver/liver/lora done: best val_dsc 0.9509 @ep1, 150 opt steps, 0.058 steps/s, peak 3697 MB

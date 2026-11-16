@@ -1,0 +1,10 @@
+task,split,n_volumes,n_npz_slices,target,n_target_slices
+prostate,train,26,377,prostate,377
+prostate,val,3,51,prostate,51
+prostate,test,3,47,prostate,47
+liver,train,32,5678,liver,5678
+liver,train,32,5678,tumor,2482
+liver,val,4,908,liver,908
+liver,val,4,908,tumor,235
+liver,test,4,625,liver,624
+liver,test,4,625,tumor,343

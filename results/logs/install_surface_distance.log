@@ -1,0 +1,24 @@
+Collecting git+https://github.com/deepmind/surface-distance.git
+  Cloning https://github.com/deepmind/surface-distance.git to c:\users\prash\appdata\local\temp\pip-req-build-s8gjaovq
+  Running command git clone --filter=blob:none --quiet https://github.com/deepmind/surface-distance.git 'C:\Users\prash\AppData\Local\Temp\pip-req-build-s8gjaovq'
+  Resolved https://github.com/deepmind/surface-distance.git to commit 1f805cea446805e559badc80dd27f34175e4173d
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: numpy in e:\anaconda3\lib\site-packages (from surface-distance==0.1) (2.3.5)
+Requirement already satisfied: scipy in e:\anaconda3\lib\site-packages (from surface-distance==0.1) (1.16.3)
+Collecting absl-py (from surface-distance==0.1)
+  Downloading absl_py-2.5.1-py3-none-any.whl.metadata (3.3 kB)
+Downloading absl_py-2.5.1-py3-none-any.whl (137 kB)
+Building wheels for collected packages: surface-distance
+  Building wheel for surface-distance (pyproject.toml): started
+  Building wheel for surface-distance (pyproject.toml): finished with status 'done'
+  Created wheel for surface-distance: filename=surface_distance-0.1-py3-none-any.whl size=14867 sha256=bf048d6a33e6b4fe76b02ef324ecb4f40e51a65ff5d052e1cfa38b84d909b7dc
+  Stored in directory: C:\Users\prash\AppData\Local\Temp\pip-ephem-wheel-cache-k8fk4nvc\wheels\36\51\7b\3225f67f131288828d7ee7a7caf66f57be7608bfe0543506e4
+Successfully built surface-distance
+Installing collected packages: absl-py, surface-distance
+
+Successfully installed absl-py-2.5.1 surface-distance-0.1

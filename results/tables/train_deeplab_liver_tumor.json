@@ -1,0 +1,48 @@
+{
+  "task": "liver",
+  "target": "tumor",
+  "model": "deeplab",
+  "epochs": 6,
+  "bs": 16,
+  "lr": 0.0001,
+  "wd": 0.01,
+  "best_val_dsc": 0.6544986671589791,
+  "best_epoch": 6,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.0731793989737828,
+      "val_dsc": 0.5425422473790797
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.7186529609637383,
+      "val_dsc": 0.5889779233234994
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5325781620847874,
+      "val_dsc": 0.39332997756514776
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.4074269571365454,
+      "val_dsc": 0.6178166590472485
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.3049919438094665,
+      "val_dsc": 0.5928116221060145
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.24274762786733797,
+      "val_dsc": 0.6544986671589791
+    }
+  ],
+  "train_seconds": 282.9153046607971,
+  "peak_vram_mb": 1909.7197265625,
+  "trainable_params": 26680721,
+  "total_params": 26680721,
+  "checkpoint": "checkpoints\\deeplab_liver_tumor.pth"
+}

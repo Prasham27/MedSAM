@@ -1,0 +1,12 @@
+2026-11-16 03:19:57,368 medsam prostate/train: 377 to encode
+2026-11-16 03:30:42,967 done: wrote 377 embeddings to C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\cache\medsam\prostate\train
+2026-11-16 03:30:51,532 medsam prostate/val: 51 to encode
+2026-11-16 03:32:21,507 done: wrote 51 embeddings to C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\cache\medsam\prostate\val
+2026-11-16 03:32:28,132 medsam prostate/test: 47 to encode
+2026-11-16 03:33:52,808 done: wrote 47 embeddings to C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\cache\medsam\prostate\test
+2026-11-16 03:33:58,995 sam prostate/train: 377 to encode
+2026-11-16 03:44:38,181 done: wrote 377 embeddings to C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\cache\sam\prostate\train
+2026-11-16 03:44:45,998 sam prostate/val: 51 to encode
+2026-11-16 03:46:17,850 done: wrote 51 embeddings to C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\cache\sam\prostate\val
+2026-11-16 03:46:26,625 sam prostate/test: 47 to encode
+2026-11-16 03:47:54,129 done: wrote 47 embeddings to C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\cache\sam\prostate\test

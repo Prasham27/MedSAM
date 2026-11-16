@@ -1,0 +1,16 @@
+2026-11-16 10:15:47,675 args {'task': 'prostate', 'stage': 'export'} device=cuda
+2026-11-16 10:15:47,675 == stage export
+2026-11-16 10:15:56,990 export: wrote C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\prostate\data.yaml counts={'train': {'images': 377, 'with_target_box': 377}, 'val': {'images': 51, 'with_target_box': 51}}
+2026-11-16 10:15:56,990 done
+2026-11-16 10:16:07,804 args {'task': 'prostate', 'stage': 'all'} device=cuda
+2026-11-16 10:16:07,804 == stage export
+2026-11-16 10:16:07,804 export: C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\yolo\prostate\data.yaml exists, skipping
+2026-11-16 10:16:07,805 == stage train
+2026-11-16 10:20:23,288 train: done, best weights C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\results\yolo\prostate\weights\best.pt exists=True
+2026-11-16 10:20:23,288 == stage eval
+2026-11-16 10:20:27,650 prostate prostate_00: dsc3d 0.8824 nsd3d 0.8135 dsc3d_pp 0.8824 slices 14
+2026-11-16 10:20:27,765 prostate prostate_13: dsc3d 0.8708 nsd3d 0.7906 dsc3d_pp 0.8708 slices 13
+2026-11-16 10:20:28,051 prostate prostate_38: dsc3d 0.9239 nsd3d 0.7926 dsc3d_pp 0.9239 slices 20
+2026-11-16 10:20:28,055 benchmark.csv: wrote 3 yolo_medsam rows
+2026-11-16 10:20:28,057 prostate: recall 0.9149 mean IoU(det) 0.8233977823704604 median dsc3d 0.8824
+2026-11-16 10:20:28,064 done

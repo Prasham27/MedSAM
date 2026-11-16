@@ -1,0 +1,11 @@
+task: liver
+raw_dir: datasets/raw/Task03_Liver
+npz_dir: datasets/npz/liver
+modality: CT
+window_width: 400
+window_level: 40
+labels: {liver: 1, tumor: 2}      # each label evaluated as its own binary target
+max_volumes: 40
+split: {train: 0.8, val: 0.1, test: 0.1}
+min_mask_pixels: 100              # in 1024x1024 space
+image_size: 1024

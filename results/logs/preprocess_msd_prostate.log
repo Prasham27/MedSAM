@@ -1,0 +1,5 @@
+2026-11-16 03:18:59,533 prostate: 32 volumes -> train=26, val=3, test=3
+2026-11-16 03:19:30,031 train: 26 volumes, 377 npz slices, targets={'prostate': 377}
+2026-11-16 03:19:34,213 val: 3 volumes, 51 npz slices, targets={'prostate': 51}
+2026-11-16 03:19:37,646 test: 3 volumes, 47 npz slices, targets={'prostate': 47}
+2026-11-16 03:19:37,648 wrote C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\datasets\npz\prostate\volumes.json and C:\Users\prash\Downloads\New folder\medsam-msd-evaluation\results\tables\dataset_stats.csv

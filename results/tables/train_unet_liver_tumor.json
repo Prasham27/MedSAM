@@ -1,0 +1,48 @@
+{
+  "task": "liver",
+  "target": "tumor",
+  "model": "unet",
+  "epochs": 6,
+  "bs": 16,
+  "lr": 0.0001,
+  "wd": 0.01,
+  "best_val_dsc": 0.6994280754251683,
+  "best_epoch": 4,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.3830290811184125,
+      "val_dsc": 0.523563585874248
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.0849213707141387,
+      "val_dsc": 0.5999730910551041
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.8793014612717506,
+      "val_dsc": 0.6202049542614754
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.7330810079971949,
+      "val_dsc": 0.6994280754251683
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.6220086818704238,
+      "val_dsc": 0.69170711420952
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5193327457094804,
+      "val_dsc": 0.6065713016910755
+    }
+  ],
+  "train_seconds": 249.00423645973206,
+  "peak_vram_mb": 1344.84130859375,
+  "trainable_params": 24439505,
+  "total_params": 24439505,
+  "checkpoint": "checkpoints\\unet_liver_tumor.pth"
+}

@@ -1,0 +1,21 @@
+{
+  "task": "prostate",
+  "detector": "yolov8n",
+  "conf": 0.25,
+  "epochs": 30,
+  "best_weights": "results/yolo/prostate/weights/best.pt",
+  "targets": {
+    "prostate": {
+      "n_test_target_slices": 47,
+      "n_detected": 43,
+      "detection_recall": 0.9148936170212766,
+      "mean_iou_detected": 0.8233977823704604,
+      "mean_iou_all_target_slices": 0.7533213753602084,
+      "n_nontarget_test_slices": 0,
+      "nontarget_false_positive_slices": 0,
+      "nontarget_false_positive_rate": 0.0,
+      "median_dsc3d": 0.8824253876132472,
+      "median_dsc3d_pp": 0.8824253876132472
+    }
+  }
+}
